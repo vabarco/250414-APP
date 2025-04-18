@@ -41,7 +41,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 app = Flask(__name__, static_folder="public", static_url_path="/")
 app.secret_key=os.getenv("SECRET_KEY")
 app.config["SESSION_TYPE"] = "filesystem"
-CORS(app)
+CORS(app, supports_credentials=True)
 
 # ✅ Supabase Setup
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
