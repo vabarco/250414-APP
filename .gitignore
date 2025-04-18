@@ -1,2 +1,20 @@
-# Environments
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+env/
+venv/
+.Python
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Environment variables
 .env
+
+# Logs
+*.log
+
+# Render-specific (optional, but safe)
+build/
