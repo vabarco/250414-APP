@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: lab-test-ai
+    name: 250414-APP
     runtime: python
     buildCommand: |
-      apt-get update && apt-get install -y tesseract-ocr
+      sudo apt-get update
+      sudo apt-get install -y tesseract-ocr
       pip install -r requirements.txt
     startCommand: gunicorn server:app
     envVars:
